@@ -195,7 +195,7 @@ export function Hero() {
         aria-label="Rolar para próxima seção"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#a1a1aa] hover:text-purple-400 transition-colors duration-200 z-10"
       >
-        <span className="text-[10px] font-mono uppercase tracking-widest">ROLAR</span>
+        <span className="text-[10px] font-mono uppercase tracking-widest">SCROLL</span>
         <motion.div
           animate={{ y: [0, 6, 0] }}
           transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}

@@ -1,24 +1,50 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Menu } from 'lucide-react'
+import { Menu, ChevronDown } from 'lucide-react'
 import { MobileMenu } from './MobileMenu'
 import { cn } from '@/lib/utils'
 import { scrollToSection } from '@/lib/navigation'
 
-const navItems = [
-  { number: '00', label: 'INÍCIO', href: '#inicio' },
-  { number: '01', label: 'SOBRE', href: '#sobre' },
-  { number: '02', label: 'HABILIDADES', href: '#habilidades' },
-  { number: '03', label: 'SERVIÇOS', href: '#servicos' },
-  { number: '04', label: 'PROJETOS', href: '#projetos' },
-  { number: '05', label: 'FORMAÇÃO', href: '#formacao' },
-  { number: '06', label: 'PROCESSO', href: '#processo' },
-  { number: '07', label: 'DIFERENCIAIS', href: '#diferenciais' }, 
-  { number: '08', label: 'TRAJETÓRIA', href: '#trajetoria' }, 
-  { number: '09', label: 'CONTATO', href: '#contato' },
+interface SubItem {
+  label: string
+  href: string
+}
 
+interface NavItem {
+  number: string
+  label: string
+  href: string
+  ids: string[]
+  subItems?: SubItem[]
+}
 
-
+const navItems: NavItem[] = [
+  { number: '00', label: 'INÍCIO', href: '#inicio', ids: ['inicio'] },
+  { 
+    number: '01', 
+    label: 'SOBRE', 
+    href: '#sobre', 
+    ids: ['sobre', 'habilidades', 'formacao', 'trajetoria'],
+    subItems: [
+      { label: 'SOBRE MIM', href: '#sobre' },
+      { label: 'HABILIDADES', href: '#habilidades' },
+      { label: 'FORMAÇÃO', href: '#formacao' },
+      { label: 'TRAJETÓRIA', href: '#trajetoria' }
+    ]
+  },
+  { number: '02', label: 'SERVIÇOS', href: '#servicos', ids: ['servicos'] },
+  { number: '03', label: 'PROJETOS', href: '#projetos', ids: ['projetos'] },
+  { 
+    number: '04', 
+    label: 'PROCESSO', 
+    href: '#processo', 
+    ids: ['processo', 'diferenciais'],
+    subItems: [
+      { label: 'PROCESSO', href: '#processo' },
+      { label: 'DIFERENCIAIS', href: '#diferenciais' }
+    ]
+  },
+  { number: '05', label: 'CONTATO', href: '#contato', ids: ['contato'] },
 ]
 
 export function Header() {
@@ -33,16 +59,21 @@ export function Header() {
   }, [])
 
   useEffect(() => {
-    const sections = navItems.map((i) => i.href.replace('#', ''))
+    const allSectionIds = navItems.flatMap((item) => item.ids)
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
-          if (e.isIntersecting) setActiveSection(e.target.id)
+          if (e.isIntersecting) {
+            const matchedItem = navItems.find((item) => item.ids.includes(e.target.id))
+            if (matchedItem) {
+              setActiveSection(matchedItem.href.replace('#', ''))
+            }
+          }
         })
       },
       { rootMargin: '-40% 0px -50% 0px' }
     )
-    sections.forEach((id) => {
+    allSectionIds.forEach((id) => {
       const el = document.getElementById(id)
       if (el) observer.observe(el)
     })
@@ -75,27 +106,49 @@ export function Header() {
             WESLEY SARAIVA
           </button>
 
-          <nav className="hidden lg:flex items-center gap-0" aria-label="Navegação principal">
+          <nav className="hidden lg:flex items-center gap-0 h-full" aria-label="Navegação principal">
             {navItems.map((item) => (
-              <button
+              <div
                 key={item.href}
-                onClick={() => handleNav(item.href)}
-                className={cn(
-                  'relative group px-4 py-5 text-xs font-mono uppercase tracking-widest transition-colors duration-200',
-                  activeSection === item.href.replace('#', '')
-                    ? 'text-purple-400'
-                    : 'text-[#a1a1aa] hover:text-[#fafafa]'
-                )}
+                className="relative group h-full flex items-center px-4"
               >
-                <span className="text-purple-600 mr-1">{item.number}</span>
-                {item.label}
+                <button
+                  onClick={() => handleNav(item.href)}
+                  className={cn(
+                    'flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest transition-colors duration-200 py-5',
+                    activeSection === item.href.replace('#', '')
+                      ? 'text-purple-400'
+                      : 'text-[#a1a1aa] hover:text-[#fafafa]'
+                  )}
+                >
+                  <span className="text-purple-600 mr-1">{item.number}</span>
+                  {item.label}
+                  {item.subItems && (
+                    <ChevronDown size={12} className="text-[#71717a] group-hover:text-purple-400 group-hover:rotate-180 transition-all duration-300 ease-out" />
+                  )}
+                </button>
+
                 {activeSection === item.href.replace('#', '') && (
                   <motion.div
                     layoutId="header-indicator"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-purple-500"
+                    className="absolute bottom-0 left-4 right-4 h-0.5 bg-purple-500"
                   />
                 )}
-              </button>
+
+                {item.subItems && (
+                  <div className="absolute top-[100%] left-1/2 -translate-x-1/2 bg-[#09090b]/98 backdrop-blur-md border border-[#3f3f46] p-1.5 min-w-[180px] flex flex-col opacity-0 pointer-events-none translate-y-2 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition-all duration-300 ease-[0.22,1,0.36,1] shadow-2xl z-50">
+                    {item.subItems.map((sub) => (
+                      <button
+                        key={sub.href}
+                        onClick={() => handleNav(sub.href)}
+                        className="text-left px-4 py-2.5 text-[10px] font-mono uppercase tracking-widest text-[#a1a1aa] hover:text-purple-400 hover:bg-[#18181b] transition-all duration-150"
+                      >
+                        {sub.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </nav>
 

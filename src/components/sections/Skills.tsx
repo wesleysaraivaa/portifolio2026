@@ -13,7 +13,7 @@ export function Skills() {
 
 
       <div className="max-w-[95vw] mx-auto px-4 md:px-6">
-        <SectionHeader index="03" title="HABILIDADES" />
+        <SectionHeader index="02" title="HABILIDADES" />
 
         <div className="flex flex-wrap gap-0 border-b border-[#27272a] mb-12 overflow-x-auto no-scrollbar" role="tablist" aria-label="Categorias de habilidades">
           {skillCategories.map((cat) => (

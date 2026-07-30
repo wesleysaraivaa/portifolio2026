@@ -46,7 +46,7 @@ export function About() {
               </p>
               <p>
                 Sou formado em Análise e Desenvolvimento de Sistemas e atuo com desenvolvimento web,
-                suporte técnico, manutenção de computadores e sistemas ERP. Ao longo da trajetória,
+                suporte técnico, manutenção de computadores. Ao longo da trajetória,
                 trabalhei como professor de informática, técnico e vendedor, o que me deu uma visão
                 ampla sobre tecnologia e negócios.
               </p>

@@ -19,20 +19,20 @@ export function Process() {
   return (
     <section id="processo" className="py-24 md:py-32 bg-[#09090b] relative overflow-hidden">
       <div className="max-w-[95vw] mx-auto px-4 md:px-6">
-        <SectionHeader index="07" title="COMO EU TRABALHO" subtitle="PROCESSO" />
+        <SectionHeader index="06" title="COMO EU TRABALHO" subtitle="PROCESSO" className="mb-12"/>
 
         <motion.div
           ref={ref}
           variants={staggerContainer}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
-          className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-0"
+          className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-0"
         >
           {steps.map((step, i) => (
             <motion.div
               key={step.number}
               variants={staggerItem}
-              className="group relative border border-[#27272a] p-5 hover:bg-purple-600 hover:border-purple-600 transition-all duration-300 cursor-default"
+              className="group relative  border border-[#27272a] p-8 hover:bg-purple-600 hover:border-purple-600 transition-all duration-300 cursor-default"
             >
               {i < steps.length - 1 && (
                 <div
@@ -43,21 +43,21 @@ export function Process() {
 
               <span
                 aria-hidden="true"
-                className="block text-2xl font-black text-[#27272a] group-hover:text-purple-700 transition-colors duration-300 leading-none mb-3 select-none"
+                className="block text-3xl font-black text-[#27272a] group-hover:text-purple-700 transition-colors duration-300 leading-none mb-3 select-none"
               >
                 {step.number}
               </span>
 
               <step.icon
-                size={16}
+                size={18}
                 className="text-purple-500 group-hover:text-white transition-colors duration-300 mb-3"
                 aria-hidden="true"
               />
 
-              <h3 className="text-xs font-black uppercase tracking-tight text-[#fafafa] group-hover:text-white transition-colors duration-300 mb-2 leading-tight">
+              <h3 className="text-1xl md:text-lg font-black uppercase tracking-tight text-[#fafafa] group-hover:text-white transition-colors duration-300 mb-2 leading-tight">
                 {step.title}
               </h3>
-              <p className="text-[10px] text-[#71717a] group-hover:text-purple-200 transition-colors duration-300 leading-relaxed">
+              <p className="text-sm md:text-[14px] text-[#71717a] group-hover:text-purple-200 transition-colors duration-300 leading-relaxed">
                 {step.description}
               </p>
             </motion.div>

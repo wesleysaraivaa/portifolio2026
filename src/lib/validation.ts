@@ -15,7 +15,6 @@ export const projectTypes = [
   { value: 'site', label: 'Site Profissional' },
   { value: 'landing', label: 'Landing Page' },
   { value: 'sistema', label: 'Sistema Web' },
-  { value: 'wordpress', label: 'WordPress' },
   { value: 'manutencao', label: 'Manutenção' },
   { value: 'suporte', label: 'Suporte Técnico' },
   { value: 'oportunidade', label: 'Oportunidade de Trabalho' },

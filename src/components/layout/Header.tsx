@@ -11,7 +11,14 @@ const navItems = [
   { number: '02', label: 'HABILIDADES', href: '#habilidades' },
   { number: '03', label: 'SERVIÇOS', href: '#servicos' },
   { number: '04', label: 'PROJETOS', href: '#projetos' },
-  { number: '05', label: 'CONTATO', href: '#contato' },
+  { number: '05', label: 'FORMAÇÃO', href: '#formacao' },
+  { number: '06', label: 'PROCESSO', href: '#processo' },
+  { number: '07', label: 'DIFERENCIAIS', href: '#diferenciais' }, 
+  { number: '08', label: 'TRAJETÓRIA', href: '#trajetoria' }, 
+  { number: '09', label: 'CONTATO', href: '#contato' },
+
+
+
 ]
 
 export function Header() {

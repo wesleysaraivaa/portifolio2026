@@ -21,7 +21,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className={cn('overflow-hidden', index === 0 ? 'h-56 md:h-80' : 'h-44 md:h-56')}>
+      <div className={cn('overflow-hidden', index === 0 ? 'h-56 md:h-80' : 'h-44 md:h-80')}>
         <img
           src={project.image}
           alt={`Captura de tela do projeto ${project.title}`}
@@ -141,7 +141,7 @@ export function Projects() {
   return (
     <section id="projetos" className="py-24 md:py-32 bg-[#09090b] relative overflow-hidden">
       <div className="max-w-[95vw] mx-auto px-4 md:px-6">
-        <SectionHeader index="05" title="PROJETOS" className="mb-12" />
+        <SectionHeader index="04" title="PROJETOS" className="mb-12" />
 
         <div
           className="flex flex-wrap gap-0 mb-12"

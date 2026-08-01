@@ -100,13 +100,13 @@ export function Header() {
         <div className="max-w-[95vw] mx-auto flex items-center justify-between h-16 px-4 md:px-6">
           <button
             onClick={() => handleNav('#inicio')}
-            className="font-bold text-sm uppercase tracking-widest text-[#fafafa] hover:text-purple-400 transition-colors duration-200"
+            className="cursor-pointer font-bold text-sm uppercase tracking-widest text-[#fafafa] hover:text-purple-400 transition-colors duration-200"
             aria-label="Ir para o início"
           >
             WESLEY SARAIVA
           </button>
 
-          <nav className="hidden lg:flex items-center gap-0 h-full" aria-label="Navegação principal">
+          <nav className=" hidden lg:flex items-center gap-0 h-full" aria-label="Navegação principal">
             {navItems.map((item) => (
               <div
                 key={item.href}
@@ -115,7 +115,7 @@ export function Header() {
                 <button
                   onClick={() => handleNav(item.href)}
                   className={cn(
-                    'flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest transition-colors duration-200 py-5',
+                    'flex items-center gap-1.5 text-xs font-mono uppercase cursor-pointer tracking-widest transition-colors duration-200 py-5',
                     activeSection === item.href.replace('#', '')
                       ? 'text-purple-400'
                       : 'text-[#a1a1aa] hover:text-[#fafafa]'
@@ -124,7 +124,7 @@ export function Header() {
                   <span className="text-purple-600 mr-1">{item.number}</span>
                   {item.label}
                   {item.subItems && (
-                    <ChevronDown size={12} className="text-[#71717a] group-hover:text-purple-400 group-hover:rotate-180 transition-all duration-300 ease-out" />
+                    <ChevronDown size={14} className="text-[#71717a] group-hover:text-purple-400 group-hover:rotate-180 transition-all duration-300 ease-out" />
                   )}
                 </button>
 
@@ -141,7 +141,7 @@ export function Header() {
                       <button
                         key={sub.href}
                         onClick={() => handleNav(sub.href)}
-                        className="text-left px-4 py-2.5 text-[10px] font-mono uppercase tracking-widest text-[#a1a1aa] hover:text-purple-400 hover:bg-[#18181b] transition-all duration-150"
+                        className="cursor-pointer text-left px-4 py-2.5 text-[12px] font-mono uppercase tracking-widest text-[#a1a1aa] hover:text-purple-400 hover:bg-[#18181b] transition-all duration-150"
                       >
                         {sub.label}
                       </button>
@@ -155,7 +155,7 @@ export function Header() {
           <div className="flex items-center gap-3">
             <button
               onClick={() => handleNav('#contato')}
-              className="hidden md:flex items-center gap-2 h-9 px-5 bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold uppercase tracking-widest transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-purple-400"
+              className="cursor-pointer hidden md:flex items-center gap-2 h-9 px-5 bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold uppercase tracking-widest transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-purple-400"
             >
               VAMOS CONVERSAR
             </button>

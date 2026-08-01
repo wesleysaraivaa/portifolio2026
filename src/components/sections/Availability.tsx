@@ -69,7 +69,7 @@ export function Availability() {
         <div className="flex flex-wrap items-center justify-center gap-4">
           <button
             onClick={scrollToContact}
-            className="h-14 px-8 bg-white hover:bg-purple-100 active:scale-95 text-purple-700 text-sm font-black uppercase tracking-widest transition-all duration-200 focus-visible:outline-2 focus-visible:outline-white"
+            className="h-14 px-8 bg-white cursor-pointer hover:bg-purple-100 active:scale-95 text-purple-700 text-sm font-black uppercase tracking-widest transition-all duration-200 focus-visible:outline-2 focus-visible:outline-white"
           >
             ENTRAR EM CONTATO
           </button>

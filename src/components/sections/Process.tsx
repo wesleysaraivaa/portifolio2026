@@ -57,7 +57,7 @@ export function Process() {
               <h3 className="text-1xl md:text-lg font-black uppercase tracking-tight text-[#fafafa] group-hover:text-white transition-colors duration-300 mb-2 leading-tight">
                 {step.title}
               </h3>
-              <p className="text-sm md:text-[14px] text-[#71717a] group-hover:text-purple-200 transition-colors duration-300 leading-relaxed">
+              <p className="text-sm text-[#71717a] group-hover:text-purple-200 transition-colors duration-300 leading-relaxed">
                 {step.description}
               </p>
             </motion.div>

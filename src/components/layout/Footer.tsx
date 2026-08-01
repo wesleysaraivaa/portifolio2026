@@ -102,7 +102,7 @@ export function Footer() {
           </div>
           <button
             onClick={scrollTop}
-            className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#a1a1aa] hover:text-purple-400 transition-colors duration-200 group"
+            className="flex items-center cursor-pointer gap-2 text-xs font-mono uppercase tracking-widest text-[#a1a1aa] hover:text-purple-400 transition-colors duration-200 group"
             aria-label="Voltar ao topo"
           >
             VOLTAR AO TOPO

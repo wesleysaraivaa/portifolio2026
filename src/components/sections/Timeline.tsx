@@ -59,7 +59,7 @@ export function Timeline() {
                     <h3 className="text-lg md:text-xl font-black uppercase tracking-tight text-[#fafafa] group-hover:text-purple-300 transition-colors duration-300 mb-2">
                       {exp.title}
                     </h3>
-                    <p className="text-sm text-[#a1a1aa] leading-relaxed max-w-2xl">
+                    <p className="text-sm  text-[#a1a1aa] leading-relaxed max-w-2xl">
                       {exp.description}
                     </p>
                   </div>

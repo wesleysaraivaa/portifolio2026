@@ -250,7 +250,7 @@ export function Contact() {
                   className={cn(
                     'w-full h-14 flex items-center justify-center gap-3',
                     'bg-purple-600 hover:bg-purple-700 text-white',
-                    'text-sm font-black uppercase tracking-widest',
+                    'text-sm font-black uppercase cursor-pointer tracking-widest',
                     'transition-all duration-200 focus-visible:outline-2 focus-visible:outline-purple-400',
                     submitting && 'opacity-70 cursor-not-allowed'
                   )}

@@ -46,7 +46,7 @@ export function Differentials() {
               <h3 className="text-sm font-black uppercase tracking-tight text-[#fafafa] group-hover:text-white transition-colors duration-300 mb-2 leading-tight">
                 {item.title}
               </h3>
-              <p className="text-xs text-[#71717a] group-hover:text-purple-200 transition-colors duration-300 leading-relaxed">
+              <p className="text-xs md:text-[14px] text-[#71717a] group-hover:text-purple-200 transition-colors duration-300 leading-relaxed">
                 {item.description}
               </p>
             </motion.div>

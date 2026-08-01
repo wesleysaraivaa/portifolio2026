@@ -82,7 +82,7 @@ export function Services() {
                 <button
                   onClick={handleContact}
                   className={cn(
-                    'w-full h-11 border border-purple-600 group-hover:border-white text-xs font-bold uppercase tracking-widest',
+                    'w-full h-11 border cursor-pointer border-purple-600 group-hover:border-white text-xs font-bold uppercase tracking-widest',
                     'text-purple-400 group-hover:text-white group-hover:bg-purple-800',
                     'transition-all duration-300 focus-visible:outline-2 focus-visible:outline-white'
                   )}

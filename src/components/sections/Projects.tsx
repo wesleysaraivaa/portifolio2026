@@ -153,7 +153,7 @@ export function Projects() {
               key={cat.value}
               onClick={() => setFilter(cat.value)}
               className={cn(
-                'h-10 px-5 text-xs font-mono uppercase tracking-widest border border-[#27272a] -mx-px transition-all duration-200 focus-visible:outline-2 focus-visible:outline-purple-400',
+                'h-10 px-5 text-xs font-mono cursor-pointer uppercase tracking-widest border border-[#27272a] -mx-px transition-all duration-200 focus-visible:outline-2 focus-visible:outline-purple-400',
                 filter === cat.value
                   ? 'bg-purple-600 border-purple-600 text-white'
                   : 'text-[#a1a1aa] hover:border-purple-600 hover:text-purple-400'

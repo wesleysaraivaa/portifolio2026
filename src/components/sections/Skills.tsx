@@ -24,7 +24,7 @@ export function Skills() {
               aria-controls={`panel-${cat.id}`}
               onClick={() => setActive(cat.id)}
               className={cn(
-                'px-5 py-4 text-xs font-mono uppercase tracking-widest border-b-2 -mb-0.5 transition-all duration-200 whitespace-nowrap focus-visible:outline-2 focus-visible:outline-purple-400',
+                'cursor-pointer px-5 py-4 text-xs font-mono uppercase tracking-widest border-b-2 -mb-0.5 transition-all duration-200 whitespace-nowrap focus-visible:outline-2 focus-visible:outline-purple-400',
                 active === cat.id
                   ? 'border-purple-500 text-purple-400 bg-purple-950/30'
                   : 'border-transparent text-[#a1a1aa] hover:text-[#fafafa] hover:border-[#3f3f46]'

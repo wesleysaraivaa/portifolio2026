@@ -5,6 +5,7 @@ import { Github, Linkedin, Instagram } from '@/components/ui/icons'
 import { socialLinks } from '@/data/socialLinks'
 import { scrollToSection } from '@/lib/navigation'
 import wesleyDevImg from '@/assets/images/wesley-dev.png'
+import LiquidEther from '@/components/ui/LiquidEther'
 
 const iconMap = { Github, Linkedin, Instagram } as const
 
@@ -22,17 +23,38 @@ export function Hero() {
     <section
       id="inicio"
       ref={containerRef}
-      className="relative min-h-svh flex flex-col justify-center overflow-hidden bg-[#09090b] pt-16"
+      className="relative h-svh min-h-svh flex flex-col justify-center overflow-hidden bg-[#09090b] pt-16"
       aria-label="Apresentação"
     >
+      <div aria-hidden="true" className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <LiquidEther
+          className="w-full h-full opacity-90 mix-blend-screen"
+          colors={['#6d28d9', '#8b5cf6', '#c4b5fd']}
+          mouseForce={25}
+          cursorSize={140}
+          resolution={0.55}
+          autoDemo={true}
+          autoSpeed={0.55}
+          autoIntensity={2.8}
+          autoResumeDelay={1500}
+          autoRampDuration={0.8}
+          takeoverDuration={0.25}
+        />
+      </div>
+
       <div
         aria-hidden="true"
-        className="absolute right-[-5vw] top-1/2 -translate-y-1/2 text-[clamp(8rem,30vw,28rem)] font-black uppercase leading-none text-[#18181b] pointer-events-none select-none tracking-tighter"
+        className="absolute inset-0 z-[1] pointer-events-none bg-gradient-to-b from-[#09090b]/20 via-transparent to-[#09090b]/85"
+      />
+
+      <div
+        aria-hidden="true"
+        className="absolute right-[-5vw] top-1/2 -translate-y-1/2 text-[clamp(8rem,30vw,28rem)] font-black uppercase leading-none text-[#18181b] pointer-events-none select-none tracking-tighter z-[2]"
       >
         WEB
       </div>
 
-      <div aria-hidden="true" className="absolute left-[5%] top-0 bottom-0 w-px bg-[#27272a] hidden xl:block" />
+      <div aria-hidden="true" className="absolute left-[5%] top-0 bottom-0 w-px bg-[#27272a] hidden xl:block z-[2]" />
 
       <motion.div
         style={{ opacity, y }}

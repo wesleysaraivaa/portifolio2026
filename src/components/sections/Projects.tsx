@@ -165,6 +165,8 @@ export function Projects() {
           ))}
         </div>
 
+        
+
         <AnimatePresence mode="wait">
           <motion.div
             key={filter}

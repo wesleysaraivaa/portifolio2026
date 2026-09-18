@@ -17,7 +17,7 @@ const MarqueeComponent = (
 
 const technologies = [
   'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Next.js',
-  'Node.js', 'Tailwind CSS', 'WordPress', 'PostgreSQL', 'Supabase',
+  'Node.js', 'Tailwind CSS', 'PostgreSQL', 'Supabase',
   'Git', 'GitHub',
 ]
 

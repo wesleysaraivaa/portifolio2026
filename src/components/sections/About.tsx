@@ -103,15 +103,6 @@ export function About() {
                 </span>
               </motion.div>
             ))}
-
-            <div className="mt-6 p-4 border-l-2 border-purple-600">
-              <p className="text-xs font-mono uppercase tracking-widest text-[#52525b] mb-2">
-                MANIFESTO
-              </p>
-              <p className="text-sm text-[#a1a1aa] leading-relaxed">
-                Criar soluções digitais que realmente funcionam para quem as usa. Simples assim.
-              </p>
-            </div>
           </motion.div>
         </div>
       </div>

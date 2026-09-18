@@ -54,8 +54,6 @@ export function Hero() {
         WEB
       </div>
 
-      <div aria-hidden="true" className="absolute left-[5%] top-0 bottom-0 w-px bg-[#27272a] hidden xl:block z-[2]" />
-
       <motion.div
         style={{ opacity, y }}
         className="relative z-10 max-w-[95vw] mx-auto w-full px-4 md:px-6 grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 lg:gap-12 items-center"

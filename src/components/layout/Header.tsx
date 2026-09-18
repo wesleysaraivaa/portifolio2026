@@ -103,7 +103,7 @@ export function Header() {
             className="cursor-pointer font-bold text-sm uppercase tracking-widest text-[#fafafa] hover:text-purple-400 transition-colors duration-200"
             aria-label="Ir para o início"
           >
-            WESLEY SARAIVA
+            WPS
           </button>
 
           <nav className=" hidden lg:flex items-center gap-0 h-full" aria-label="Navegação principal">

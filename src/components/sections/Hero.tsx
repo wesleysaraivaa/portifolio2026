@@ -44,12 +44,12 @@ export function Hero() {
 
       <div
         aria-hidden="true"
-        className="absolute inset-0 z-[1] pointer-events-none bg-gradient-to-b from-[#09090b]/20 via-transparent to-[#09090b]/85"
+        className="absolute inset-0 z-1 pointer-events-none bg-linear-to-b from-[#09090b]/20 via-transparent to-[#09090b]/85"
       />
 
       <div
         aria-hidden="true"
-        className="absolute right-[-5vw] top-1/2 -translate-y-1/2 text-[clamp(8rem,30vw,28rem)] font-black uppercase leading-none text-[#18181b] pointer-events-none select-none tracking-tighter z-[2]"
+        className="absolute right-[-5vw] top-1/2 -translate-y-1/2 text-[clamp(8rem,30vw,28rem)] font-black uppercase leading-none text-[#18181b] pointer-events-none select-none tracking-tighter z-2"
       >
         WEB
       </div>
@@ -213,7 +213,7 @@ export function Hero() {
       <button
         onClick={handleScroll}
         aria-label="Rolar para próxima seção"
-        className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#a1a1aa] hover:text-purple-400 transition-colors duration-200 z-10"
+        className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-[#a1a1aa] hover:text-purple-400 transition-colors duration-200 z-10"
       >
         <span className="text-[10px] font-mono uppercase tracking-widest">SCROLL</span>
         <motion.div

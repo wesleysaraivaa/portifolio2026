@@ -136,7 +136,7 @@ export function Header() {
                 )}
 
                 {item.subItems && (
-                  <div className="absolute top-[100%] left-1/2 -translate-x-1/2 bg-[#09090b]/98 backdrop-blur-md border border-[#3f3f46] p-1.5 min-w-[180px] flex flex-col opacity-0 pointer-events-none translate-y-2 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition-all duration-300 ease-[0.22,1,0.36,1] shadow-2xl z-50">
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 bg-[#09090b]/98 backdrop-blur-md border border-[#3f3f46] p-1.5 min-w-45 flex flex-col opacity-0 pointer-events-none translate-y-2 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition-all duration-300 ease-[0.22,1,0.36,1] shadow-2xl z-50">
                     {item.subItems.map((sub) => (
                       <button
                         key={sub.href}

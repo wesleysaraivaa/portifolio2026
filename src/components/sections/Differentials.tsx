@@ -43,10 +43,10 @@ export function Differentials() {
                 {item.number}
               </span>
 
-              <h3 className="text-sm font-black uppercase tracking-tight text-[#fafafa] group-hover:text-white transition-colors duration-300 mb-2 leading-tight">
+              <h3 className="text-sm md:text-base font-black uppercase tracking-tight text-[#fafafa] group-hover:text-white transition-colors duration-300 mb-2 leading-tight">
                 {item.title}
               </h3>
-              <p className="text-xs md:text-[14px] text-[#71717a] group-hover:text-purple-200 transition-colors duration-300 leading-relaxed">
+              <p className="text-xs md:text-base text-[#71717a] group-hover:text-purple-200 transition-colors duration-300 leading-relaxed">
                 {item.description}
               </p>
             </motion.div>

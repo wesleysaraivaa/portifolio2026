@@ -109,13 +109,13 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       >
         <div>
           <div className="flex items-start justify-between gap-4 mb-2">
-            <h3 className="text-base font-black uppercase tracking-tight text-[#fafafa] group-hover:text-purple-300 transition-colors duration-300 leading-tight">
+            <h3 className="text-lg md:text-base font-black uppercase tracking-tight text-[#fafafa] group-hover:text-purple-300 transition-colors duration-300 leading-tight">
               {project.title}
             </h3>
             <span className="text-xs font-mono text-[#71717a] shrink-0">{project.year}</span>
           </div>
 
-          <p className="text-xs text-[#a1a1aa] mb-4 leading-relaxed line-clamp-2">
+          <p className="text-sm md:text-base text-[#a1a1aa] mb-4 leading-relaxed line-clamp-2">
             {project.description}
           </p>
 

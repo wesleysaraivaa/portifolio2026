@@ -15,7 +15,7 @@ export function Skills() {
       <div className="max-w-[95vw] mx-auto px-4 md:px-6">
         <SectionHeader index="02" title="HABILIDADES" />
 
-        <div className="flex flex-wrap gap-0 border-b border-[#27272a] mb-12 overflow-x-auto no-scrollbar" role="tablist" aria-label="Categorias de habilidades">
+        <div className="flex flex-wrap text-[10px] gap-0 border-b border-[#27272a] mb-12 overflow-x-auto no-scrollbar" role="tablist" aria-label="Categorias de habilidades">
           {skillCategories.map((cat) => (
             <button
               key={cat.id}
@@ -24,7 +24,7 @@ export function Skills() {
               aria-controls={`panel-${cat.id}`}
               onClick={() => setActive(cat.id)}
               className={cn(
-                'cursor-pointer px-5 py-4 text-xs font-mono uppercase tracking-widest border-b-2 -mb-0.5 transition-all duration-200 whitespace-nowrap focus-visible:outline-2 focus-visible:outline-purple-400',
+                'cursor-pointer px-5 py-4 text-xs md:text-base font-mono uppercase tracking-widest border-b-2 -mb-0.5 transition-all duration-200 whitespace-nowrap focus-visible:outline-2 focus-visible:outline-purple-400',
                 active === cat.id
                   ? 'border-purple-500 text-purple-400 bg-purple-950/30'
                   : 'border-transparent text-[#a1a1aa] hover:text-[#fafafa] hover:border-[#3f3f46]'
@@ -47,7 +47,7 @@ export function Skills() {
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] as const }}
           >
             <div aria-hidden="true" className="relative mb-8 overflow-hidden">
-              <span className="text-[clamp(3rem,10vw,8rem)] font-black uppercase tracking-tighter text-[#18181b] leading-none block">
+              <span className="text-[clamp(2rem,10vw,8rem)] font-black uppercase tracking-tighter text-[#18181b] leading-none block">
                 {current.label}
               </span>
             </div>
@@ -64,7 +64,7 @@ export function Skills() {
                   <span className="text-[10px] font-mono text-[#52525b] group-hover:text-purple-200 block mb-2 transition-colors">
                     {String(i + 1).padStart(2, '0')}
                   </span>
-                  <span className="text-sm font-medium uppercase tracking-wide text-[#fafafa] group-hover:text-white transition-colors leading-tight block">
+                  <span className="text-sm md:text-base font-medium uppercase tracking-wide text-[#fafafa] group-hover:text-white transition-colors leading-tight block">
                     {skill}
                   </span>
                 </motion.div>

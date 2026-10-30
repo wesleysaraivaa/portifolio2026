@@ -59,7 +59,7 @@ export function Education() {
                 {edu.period}
               </p>
 
-              <p className="text-sm text-[#71717a] leading-relaxed group-hover:text-[#a1a1aa] transition-colors duration-300">
+              <p className="text-sm md:text-base text-[#71717a] leading-relaxed group-hover:text-[#a1a1aa] transition-colors duration-300">
                 {edu.description}
               </p>
 

@@ -63,11 +63,10 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex items-center gap-3 mb-6"
-          >
+            className="flex items-center gap-3 mb-6" >
             <span className="size-2 rounded-full bg-green-500" aria-hidden="true" />
             <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#a1a1aa]">
-              DESENVOLVEDOR WEB · UBAJARA, CEARÁ
+              DESENVOLVEDOR WEB · UBAJARA-CE
             </span>
           </motion.div>
 
@@ -76,7 +75,7 @@ export function Hero() {
               initial={{ y: '110%' }}
               animate={{ y: '0%' }}
               transition={{ duration: 0.9, delay: 0.35, ease: [0.22, 1, 0.36, 1] as const }}
-              className="text-[clamp(4rem,14vw,11rem)] font-black uppercase leading-none tracking-tighter text-[#fafafa]"
+              className="text-[clamp(3rem,14vw,11rem)] font-black uppercase leading-none tracking-tighter text-[#fafafa]"
             >
               WESLEY
             </motion.h1>
@@ -88,7 +87,7 @@ export function Hero() {
               transition={{ duration: 0.9, delay: 0.5, ease: [0.22, 1, 0.36, 1] as const }}
               className="flex items-end gap-4 flex-wrap"
             >
-              <span className="text-[clamp(4rem,14vw,11rem)] font-black uppercase leading-none tracking-tighter text-purple-500">
+              <span className="text-[clamp(3rem,14vw,11rem)] font-black uppercase leading-none tracking-tighter text-purple-500">
                 SARAIVA
               </span>
             </motion.div>
@@ -106,7 +105,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="text-sm text-[#71717a] max-w-xl mb-10 leading-relaxed"
+            className="text-sm md:text-base text-[#77778b] max-w-xl mb-10 leading-relaxed"
           >
             Desenvolvo sites, interfaces e aplicações voltadas para empresas, profissionais
             e projetos que precisam fortalecer sua presença digital.
@@ -116,7 +115,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.9 }}
-            className="flex flex-wrap gap-4 mb-12"
+            className="flex flex-row gap-4 mb-12"
           >
             <a
               href="#projetos"

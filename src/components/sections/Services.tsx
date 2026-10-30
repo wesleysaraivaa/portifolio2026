@@ -63,7 +63,7 @@ export function Services() {
                   {service.title}
                 </h3>
 
-                <p className="text-sm text-[#a1a1aa] group-hover:text-purple-100 transition-colors duration-300 mb-6 leading-relaxed flex-1">
+                <p className="text-sm md:text-base text-[#a1a1aa] group-hover:text-purple-100 transition-colors duration-300 mb-6 leading-relaxed flex-1">
                   {service.description}
                 </p>
 
@@ -71,7 +71,7 @@ export function Services() {
                   {service.items.map((item) => (
                     <li
                       key={item}
-                      className="flex items-center gap-2 text-xs font-mono text-[#71717a] group-hover:text-purple-200 transition-colors duration-300 uppercase tracking-wide"
+                      className="flex items-center gap-2 text-sm md:text-base font-mono text-[#71717a] group-hover:text-purple-200 transition-colors duration-300 uppercase tracking-wide"
                     >
                       <span aria-hidden="true" className="size-1.5 bg-purple-500 group-hover:bg-white transition-colors duration-300 shrink-0" />
                       {item}

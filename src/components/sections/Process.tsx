@@ -54,10 +54,10 @@ export function Process() {
                 aria-hidden="true"
               />
 
-              <h3 className="text-1xl md:text-lg font-black uppercase tracking-tight text-[#fafafa] group-hover:text-white transition-colors duration-300 mb-2 leading-tight">
+              <h3 className="text-sm md:text-base lg:text-lg font-black uppercase tracking-tight text-[#fafafa] group-hover:text-white transition-colors duration-300 mb-2 leading-tight line-clamp-2 wrap-break-word">
                 {step.title}
               </h3>
-              <p className="text-sm text-[#71717a] group-hover:text-purple-200 transition-colors duration-300 leading-relaxed">
+              <p className="text-sm md:text-base text-[#71717a] group-hover:text-purple-200 transition-colors duration-300 leading-relaxed">
                 {step.description}
               </p>
             </motion.div>

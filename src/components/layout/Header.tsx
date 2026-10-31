@@ -97,7 +97,7 @@ export function Header() {
             : 'bg-transparent border-b border-transparent'
         )}
       >
-        <div className="max-w-[95vw] mx-auto flex items-center justify-between h-16 px-4 md:px-6">
+        <div className="max-w-7xl mx-auto flex items-center justify-between h-16 px-4 md:px-6">
           <button
             onClick={() => handleNav('#inicio')}
             className="cursor-pointer font-bold text-sm uppercase tracking-widest text-[#fafafa] hover:text-purple-400 transition-colors duration-200"

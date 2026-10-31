@@ -18,7 +18,7 @@ export function Process() {
 
   return (
     <section id="processo" className="py-24 md:py-32 bg-[#09090b] relative overflow-hidden">
-      <div className="max-w-[95vw] mx-auto px-4 md:px-6">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
         <SectionHeader index="06" title="COMO EU TRABALHO" subtitle="PROCESSO" className="mb-12"/>
 
         <motion.div

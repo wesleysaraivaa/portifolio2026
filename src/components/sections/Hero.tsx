@@ -56,7 +56,7 @@ export function Hero() {
 
       <motion.div
         style={{ opacity, y }}
-        className="relative z-10 max-w-[95vw] mx-auto w-full px-4 md:px-6 grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 lg:gap-12 items-center"
+        className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 lg:gap-12 items-center"
       >
         <div>
           <motion.div
@@ -199,7 +199,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 1.1 }}
-        className="relative z-10 max-w-[95vw] mx-auto w-full px-4 md:px-6 mt-8 lg:mt-12"
+        className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 mt-8 lg:mt-12"
       >
         <div className="border border-[#27272a] inline-flex items-center gap-3 px-4 py-2">
           <span className="size-2 rounded-full bg-green-500 animate-pulse" aria-hidden="true" />

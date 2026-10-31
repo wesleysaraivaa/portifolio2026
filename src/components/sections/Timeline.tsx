@@ -13,7 +13,7 @@ export function Timeline() {
 
   return (
     <section id="trajetoria" className="py-24 md:py-32 bg-[#18181b] relative overflow-hidden">
-      <div className="max-w-[95vw] mx-auto px-4 md:px-6">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
         <SectionHeader index="08" title="TRAJETÓRIA" />
 
         <motion.ul

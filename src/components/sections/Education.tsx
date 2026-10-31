@@ -13,7 +13,7 @@ export function Education() {
 
   return (
     <section id="formacao" className="py-24 md:py-32 bg-[#18181b] relative overflow-hidden">
-      <div className="max-w-[95vw] mx-auto px-4 md:px-6">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
         <SectionHeader index="05" title="FORMAÇÃO" className="mb-12" />
 
         <motion.div

@@ -115,8 +115,8 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             <span className="text-xs font-mono text-[#71717a] shrink-0">{project.year}</span>
           </div>
 
-          <p className="text-sm md:text-base text-[#a1a1aa] mb-4 leading-relaxed line-clamp-2">
-            {project.description}
+          <p className="text-sm md:text-base text-[#a1a1aa] mb-4 leading-relaxed line-clamp-3">
+            {project.fullDescription}
           </p>
 
           <div className="flex flex-wrap gap-1.5">

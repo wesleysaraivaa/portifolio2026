@@ -56,7 +56,7 @@ export function Availability() {
         </MarqueeComponent>
       </div>
 
-      <div className="relative z-10 max-w-[95vw] mx-auto px-4 md:px-6 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 text-center">
         <h2 className="text-[clamp(2.5rem,8vw,7rem)] font-black uppercase tracking-tighter leading-none text-white mb-6">
           VAMOS CRIAR<br />
           <span className="text-purple-300">ALGO?</span>

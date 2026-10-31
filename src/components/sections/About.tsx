@@ -18,7 +18,7 @@ export function About() {
 
   return (
     <section id="sobre" className="py-24 md:py-32 bg-[#09090b] relative overflow-hidden">
-      <div className="max-w-[95vw] mx-auto px-4 md:px-6">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
         <SectionHeader index="01" title="SOBRE" />
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-12 lg:gap-16">

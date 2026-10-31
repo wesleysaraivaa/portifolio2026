@@ -28,7 +28,7 @@ export function Footer() {
         WESLEY
       </div>
 
-      <div className="relative z-10 max-w-[95vw] mx-auto px-4 md:px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
         <div className="py-12 grid grid-cols-1 md:grid-cols-3 gap-8 border-b border-[#27272a]">
           <div>
             <h2 className="text-2xl font-black uppercase tracking-tight text-[#fafafa] mb-1">

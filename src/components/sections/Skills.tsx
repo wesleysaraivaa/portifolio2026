@@ -12,7 +12,7 @@ export function Skills() {
     <section id="habilidades" className="py-24 md:py-32 bg-[#09090b] relative overflow-hidden">
 
 
-      <div className="max-w-[95vw] mx-auto px-4 md:px-6">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
         <SectionHeader index="02" title="HABILIDADES" />
 
         <div className="flex flex-wrap text-[10px] gap-0 border-b border-[#27272a] mb-12 overflow-x-auto no-scrollbar" role="tablist" aria-label="Categorias de habilidades">

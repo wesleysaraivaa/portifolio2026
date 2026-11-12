@@ -99,7 +99,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             </span>
             <button
               onClick={onClose}
-              className="size-11 flex items-center justify-center border border-[#3f3f46] text-[#fafafa] hover:bg-purple-600 hover:border-purple-600 transition-colors duration-200"
+              className="size-11 flex items-center justify-center border border-[#3f3f46] text-[#fafafa] hover:border-[#3f3f46] hover:bg-white/[0.04] transition-colors duration-200"
               aria-label="Fechar menu"
             >
               <X size={20} />
@@ -123,33 +123,33 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                       {hasSubItems ? (
                         <button
                           onClick={() => toggleExpand(item.href)}
-                          className="group w-full flex items-center justify-between py-4 text-left border-b border-[#27272a] hover:border-purple-600 transition-colors duration-200"
+                          className="group w-full flex items-center justify-between py-4 text-left border-b border-[#27272a] hover:border-[#3f3f46] transition-colors duration-200"
                         >
                           <div className="flex items-center gap-4">
-                            <span className="text-xs font-mono text-purple-500 tracking-widest min-w-8">
+                            <span className="text-xs font-mono text-brand-500 tracking-widest min-w-8">
                               {item.number}
                             </span>
-                            <span className="text-3xl font-bold uppercase tracking-tight text-[#fafafa] group-hover:text-purple-400 transition-colors duration-200">
+                            <span className="text-3xl font-bold uppercase tracking-tight text-[#fafafa] group-hover:text-brand-300 transition-colors duration-200">
                               {item.label}
                             </span>
                           </div>
                           <ChevronDown
                             size={20}
                             className={cn(
-                              'text-[#71717a] group-hover:text-purple-400 transition-transform duration-300',
-                              isExpanded && 'rotate-180 text-purple-400'
+                              'text-[#71717a] group-hover:text-brand-300 transition-transform duration-300',
+                              isExpanded && 'rotate-180 text-brand-300'
                             )}
                           />
                         </button>
                       ) : (
                         <button
                           onClick={() => handleLinkClick(item.href)}
-                          className="group w-full flex items-center gap-4 py-4 text-left border-b border-[#27272a] hover:border-purple-600 transition-colors duration-200"
+                          className="group w-full flex items-center gap-4 py-4 text-left border-b border-[#27272a] hover:border-[#3f3f46] transition-colors duration-200"
                         >
-                          <span className="text-xs font-mono text-purple-500 tracking-widest min-w-8">
+                          <span className="text-xs font-mono text-brand-500 tracking-widest min-w-8">
                             {item.number}
                           </span>
-                          <span className="text-3xl font-bold uppercase tracking-tight text-[#fafafa] group-hover:text-purple-400 transition-colors duration-200">
+                          <span className="text-3xl font-bold uppercase tracking-tight text-[#fafafa] group-hover:text-brand-300 transition-colors duration-200">
                             {item.label}
                           </span>
                         </button>
@@ -166,7 +166,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                             <button
                               key={sub.href}
                               onClick={() => handleLinkClick(sub.href)}
-                              className="text-left py-3 text-sm font-mono uppercase tracking-widest text-[#a1a1aa] hover:text-purple-400 transition-colors duration-150"
+                              className="text-left py-3 text-sm font-mono uppercase tracking-widest text-[#a1a1aa] hover:text-[#fafafa] transition-colors duration-150"
                             >
                               {sub.label}
                             </button>
@@ -190,7 +190,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   rel="noopener noreferrer"
                   className={cn(
                     'text-xs font-mono uppercase tracking-widest text-[#a1a1aa]',
-                    'hover:text-purple-400 transition-colors duration-200'
+                    'hover:text-brand-300 transition-colors duration-200'
                   )}
                   aria-label={link.label}
                 >

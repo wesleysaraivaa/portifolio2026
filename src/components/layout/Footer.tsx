@@ -20,10 +20,10 @@ export function Footer() {
   const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
   return (
-    <footer className="relative bg-[#09090b] border-t-2 border-purple-600 overflow-hidden">
+    <footer className="relative bg-[#09090b] border-t border-[#27272a] overflow-hidden">
       <div
         aria-hidden="true"
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[clamp(6rem,18vw,14rem)] font-black uppercase tracking-tighter text-[#18181b] pointer-events-none select-none leading-none whitespace-nowrap"
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[clamp(6rem,18vw,14rem)] font-black uppercase tracking-tighter text-brand-900 pointer-events-none select-none leading-none whitespace-nowrap"
       >
         WESLEY
       </div>
@@ -31,10 +31,10 @@ export function Footer() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
         <div className="py-12 grid grid-cols-1 md:grid-cols-3 gap-8 border-b border-[#27272a]">
           <div>
-            <h2 className="text-2xl font-black uppercase tracking-tight text-[#fafafa] mb-1">
+            <h2 className="text-2xl font-bold uppercase tracking-tight text-[#fafafa] mb-1">
               WESLEY SARAIVA
             </h2>
-            <p className="text-xs font-mono uppercase tracking-widest text-purple-400 mb-4">
+            <p className="text-xs font-mono uppercase tracking-widest text-brand-400 mb-4">
               DESENVOLVEDOR WEB · UNIVERSOTECH
             </p>
             <p className="text-sm text-[#a1a1aa] max-w-xs">
@@ -51,7 +51,7 @@ export function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-[#a1a1aa] hover:text-purple-400 transition-colors duration-200 uppercase tracking-wide font-medium"
+                    className="text-sm text-[#a1a1aa] hover:text-[#fafafa] transition-colors duration-200 uppercase tracking-wide font-medium"
                   >
                     {link.label}
                   </a>
@@ -73,7 +73,7 @@ export function Footer() {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm text-[#a1a1aa] hover:text-purple-400 transition-colors duration-200"
+                    className="flex items-center gap-2 text-sm text-[#a1a1aa] hover:text-brand-300 transition-colors duration-200"
                     aria-label={`Visitar ${link.label}`}
                   >
                     {Icon && <Icon size={14} />}
@@ -102,11 +102,11 @@ export function Footer() {
           </div>
           <button
             onClick={scrollTop}
-            className="flex items-center cursor-pointer gap-2 text-xs font-mono uppercase tracking-widest text-[#a1a1aa] hover:text-purple-400 transition-colors duration-200 group"
+            className="flex items-center cursor-pointer gap-2 text-xs font-mono uppercase tracking-widest text-[#a1a1aa] hover:text-brand-300 transition-colors duration-200 group"
             aria-label="Voltar ao topo"
           >
             VOLTAR AO TOPO
-            <span className="size-7 border border-[#3f3f46] group-hover:border-purple-600 flex items-center justify-center transition-colors duration-200">
+            <span className="size-7 border border-[#3f3f46] group-hover:border-brand-400 flex items-center justify-center transition-colors duration-200">
               <ArrowUp size={12} />
             </span>
           </button>

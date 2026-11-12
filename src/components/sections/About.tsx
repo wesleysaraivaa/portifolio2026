@@ -5,11 +5,11 @@ import { staggerContainer, staggerItem, viewportOptions } from '@/lib/animations
 import { SectionHeader } from '@/components/shared/SectionHeader'
 
 const roles = [
-  { icon: Code, label: 'Desenvolvedor Web', color: 'text-purple-400' },
-  { icon: Monitor, label: 'Técnico em Informática', color: 'text-purple-400' },
-  { icon: Headphones, label: 'Suporte Técnico', color: 'text-purple-400' },
-  { icon: Store, label: 'Freelancer', color: 'text-purple-400' },
-  { icon: Building2, label: 'UniwersoTech', color: 'text-purple-400' },
+  { icon: Code, label: 'Desenvolvedor Web', color: 'text-brand-400' },
+  { icon: Monitor, label: 'Técnico em Informática', color: 'text-brand-400' },
+  { icon: Headphones, label: 'Suporte Técnico', color: 'text-brand-400' },
+  { icon: Store, label: 'Freelancer', color: 'text-brand-400' },
+  { icon: Building2, label: 'UniwersoTech', color: 'text-brand-400' },
 ]
 
 export function About() {
@@ -64,7 +64,7 @@ export function About() {
               className="flex flex-wrap items-center gap-6 mt-10"
             >
               <div className="flex items-center gap-2 text-sm text-[#a1a1aa]">
-                <MapPin size={14} className="text-purple-500" />
+                <MapPin size={14} className="text-brand-400" />
                 <span className="font-mono uppercase tracking-wide">Ubajara, Ceará</span>
               </div>
               <div className="flex items-center gap-2 text-sm">
@@ -89,16 +89,16 @@ export function About() {
               <motion.div
                 key={role.label}
                 variants={staggerItem}
-                className="group flex items-center gap-4 p-4 border border-[#27272a] hover:bg-purple-600 hover:border-purple-600 transition-all duration-300 cursor-default"
+                className="group card flex items-center gap-4 p-4 cursor-default"
               >
-                <span className="text-xs font-mono text-[#52525b] group-hover:text-purple-200 transition-colors w-6">
+                <span className="text-xs font-mono text-brand-500 w-6">
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <role.icon
                   size={16}
-                  className={`${role.color} group-hover:text-white transition-colors`}
+                  className={role.color}
                 />
-                <span className="text-sm font-medium uppercase tracking-wide text-[#fafafa] group-hover:text-white transition-colors">
+                <span className="text-sm font-semibold tracking-[-0.01em] text-[#fafafa]">
                   {role.label}
                 </span>
               </motion.div>

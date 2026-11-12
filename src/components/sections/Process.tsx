@@ -26,38 +26,38 @@ export function Process() {
           variants={staggerContainer}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
-          className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-0"
+          className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-0"
         >
           {steps.map((step, i) => (
             <motion.div
               key={step.number}
               variants={staggerItem}
-              className="group relative  border border-[#27272a] p-8 hover:bg-purple-600 hover:border-purple-600 transition-all duration-300 cursor-default"
+              className="group relative card p-8 cursor-default"
             >
               {i < steps.length - 1 && (
                 <div
                   aria-hidden="true"
-                  className="hidden lg:block absolute top-6 right-0 w-px h-8 bg-[#27272a] group-hover:bg-purple-700 transition-colors duration-300 translate-x-0.5"
+                  className="hidden lg:block absolute top-6 right-0 w-px h-8 bg-[#27272a] translate-x-0.5"
                 />
               )}
 
               <span
                 aria-hidden="true"
-                className="block text-3xl font-black text-[#27272a] group-hover:text-purple-700 transition-colors duration-300 leading-none mb-3 select-none"
+                className="block text-3xl font-black text-brand-900 leading-none mb-3 select-none"
               >
                 {step.number}
               </span>
 
               <step.icon
                 size={18}
-                className="text-purple-500 group-hover:text-white transition-colors duration-300 mb-3"
+                className="text-brand-400 mb-3"
                 aria-hidden="true"
               />
 
-              <h3 className="text-sm md:text-base lg:text-lg font-black uppercase tracking-tight text-[#fafafa] group-hover:text-white transition-colors duration-300 mb-2 leading-tight line-clamp-2 wrap-break-word">
+              <h3 className="text-sm md:text-base lg:text-lg font-semibold tracking-[-0.01em] text-[#fafafa] mb-2 leading-tight line-clamp-2 wrap-break-word">
                 {step.title}
               </h3>
-              <p className="text-sm md:text-base text-[#71717a] group-hover:text-purple-200 transition-colors duration-300 leading-relaxed">
+              <p className="text-sm md:text-base text-[#71717a] leading-relaxed">
                 {step.description}
               </p>
             </motion.div>

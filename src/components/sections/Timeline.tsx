@@ -30,12 +30,12 @@ export function Timeline() {
               <motion.li
                 key={exp.id}
                 variants={staggerItem}
-                className="group relative grid grid-cols-[auto_1fr] gap-0 border-b border-[#27272a] hover:border-purple-600 transition-colors duration-300"
+                className="group relative grid grid-cols-[auto_1fr] gap-0 border-b border-[#27272a] hover:border-[#3f3f46] transition-colors duration-300"
               >
-                <div className="w-20 md:w-28 shrink-0 pt-6 pb-6 border-r border-[#27272a] group-hover:border-purple-600 transition-colors duration-300 pr-4 md:pr-6">
+                <div className="w-20 md:w-28 shrink-0 pt-6 pb-6 border-r border-[#27272a] group-hover:border-[#3f3f46] transition-colors duration-300 pr-4 md:pr-6">
                   <span
                     aria-hidden="true"
-                    className="block text-[clamp(1.8rem,5vw,3.5rem)] font-black text-[#27272a] group-hover:text-purple-700 transition-colors duration-300 leading-none tracking-tighter"
+                    className="block text-[clamp(1.8rem,5vw,3.5rem)] font-black text-brand-900 leading-none tracking-tighter"
                   >
                     {exp.number}
                   </span>
@@ -44,19 +44,19 @@ export function Timeline() {
                 <div className="py-6 pl-6 md:pl-8 flex flex-col md:flex-row md:items-start md:gap-8">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      {Icon && <Icon size={14} className="text-purple-500 shrink-0" />}
+                      {Icon && <Icon size={14} className="text-brand-400 shrink-0" />}
                       {exp.period && (
                         <span className="text-xs font-mono uppercase tracking-widest text-[#52525b]">
                           {exp.period}
                         </span>
                       )}
                       {exp.highlight && (
-                        <span className="text-[10px] font-mono uppercase tracking-widest text-purple-400 border border-purple-700 px-2 py-0.5">
+                        <span className="text-[10px] font-mono uppercase tracking-widest text-brand-300 bg-brand-900/40 border border-brand-900 px-2 py-0.5">
                           DESTAQUE
                         </span>
                       )}
                     </div>
-                    <h3 className="text-lg md:text-xl font-black uppercase tracking-tight text-[#fafafa] group-hover:text-purple-300 transition-colors duration-300 mb-2">
+                    <h3 className="text-lg md:text-xl font-semibold tracking-[-0.01em] text-[#fafafa] mb-2">
                       {exp.title}
                     </h3>
                     <p className="text-xs md:text-base  text-[#a1a1aa] leading-relaxed max-w-2xl">

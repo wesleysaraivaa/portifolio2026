@@ -100,7 +100,7 @@ export function Header() {
         <div className="max-w-7xl mx-auto flex items-center justify-between h-16 px-4 md:px-6">
           <button
             onClick={() => handleNav('#inicio')}
-            className="cursor-pointer font-bold text-sm uppercase tracking-widest text-[#fafafa] hover:text-purple-400 transition-colors duration-200"
+            className="cursor-pointer font-bold text-sm uppercase tracking-widest text-[#fafafa] hover:text-brand-300 transition-colors duration-200"
             aria-label="Ir para o início"
           >
             WPS
@@ -117,21 +117,21 @@ export function Header() {
                   className={cn(
                     'flex items-center gap-1.5 text-xs font-mono uppercase cursor-pointer tracking-widest transition-colors duration-200 py-5',
                     activeSection === item.href.replace('#', '')
-                      ? 'text-purple-400'
-                      : 'text-[#a1a1aa] hover:text-[#fafafa]'
+                      ? 'text-[#fafafa]'
+                      : 'text-[#71717a] hover:text-[#fafafa]'
                   )}
                 >
-                  <span className="text-purple-600 mr-1">{item.number}</span>
+                  <span className="text-brand-500 mr-1">{item.number}</span>
                   {item.label}
                   {item.subItems && (
-                    <ChevronDown size={14} className="text-[#71717a] group-hover:text-purple-400 group-hover:rotate-180 transition-all duration-300 ease-out" />
+                    <ChevronDown size={14} className="text-[#71717a] group-hover:text-brand-300 group-hover:rotate-180 transition-all duration-300 ease-out" />
                   )}
                 </button>
 
                 {activeSection === item.href.replace('#', '') && (
                   <motion.div
                     layoutId="header-indicator"
-                    className="absolute bottom-0 left-4 right-4 h-0.5 bg-purple-500"
+                    className="absolute bottom-0 left-4 right-4 h-0.5 bg-brand-400"
                   />
                 )}
 
@@ -141,7 +141,7 @@ export function Header() {
                       <button
                         key={sub.href}
                         onClick={() => handleNav(sub.href)}
-                        className="cursor-pointer text-left px-4 py-2.5 text-[12px] font-mono uppercase tracking-widest text-[#a1a1aa] hover:text-purple-400 hover:bg-[#18181b] transition-all duration-150"
+                        className="cursor-pointer text-left px-4 py-2.5 text-[12px] font-mono uppercase tracking-widest text-[#a1a1aa] hover:text-[#fafafa] hover:bg-[#18181b] transition-all duration-150"
                       >
                         {sub.label}
                       </button>
@@ -155,13 +155,13 @@ export function Header() {
           <div className="flex items-center gap-3">
             <button
               onClick={() => handleNav('#contato')}
-              className="cursor-pointer hidden md:flex items-center gap-2 h-9 px-5 bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold uppercase tracking-widest transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-purple-400"
+              className="cursor-pointer hidden md:flex items-center gap-2 h-9 px-5 bg-brand-400 hover:bg-brand-300 text-[#09090b] text-xs font-bold uppercase tracking-widest transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-brand-400"
             >
               VAMOS CONVERSAR
             </button>
             <button
               onClick={() => setMenuOpen(true)}
-              className="lg:hidden size-10 flex items-center justify-center border border-[#3f3f46] text-[#fafafa] hover:bg-purple-600 hover:border-purple-600 transition-colors duration-200"
+              className="lg:hidden size-10 flex items-center justify-center border border-[#3f3f46] text-[#fafafa] hover:border-[#3f3f46] hover:bg-white/[0.04] transition-colors duration-200"
               aria-label="Abrir menu"
               aria-expanded={menuOpen}
             >

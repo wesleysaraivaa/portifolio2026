@@ -21,7 +21,7 @@ export function Education() {
           variants={staggerContainer}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
-          className="grid grid-cols-1 md:grid-cols-2 gap-0"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr] gap-0"
         >
           {educations.map((edu) => {
             const Icon = iconMap[edu.type as keyof typeof iconMap] || GraduationCap
@@ -29,44 +29,39 @@ export function Education() {
               <motion.article
                 key={edu.id}
                 variants={staggerItem}
-                className="group relative border-2 border-[#27272a] hover:border-purple-600 p-8 transition-all duration-300 bg-[#09090b]"
+                className="relative card p-8 bg-[#09090b]"
               >
                 <span
                   aria-hidden="true"
-                  className="absolute top-4 right-6 text-6xl font-black text-[#18181b] group-hover:text-purple-900 transition-colors duration-300 leading-none tracking-tighter select-none"
+                  className="absolute top-4 right-6 text-6xl font-black text-brand-900 leading-none tracking-tighter select-none"
                 >
                   {edu.number}
                 </span>
 
                 <Icon
                   size={24}
-                  className="text-purple-500 mb-5"
+                  className="text-brand-400 mb-5"
                   aria-hidden="true"
                 />
 
-              <span className="text-[10px] font-mono uppercase tracking-widest text-purple-400 border border-purple-800 px-2 py-0.5 mb-4 inline-block">
+              <span className="text-[10px] font-mono uppercase tracking-widest text-brand-300 bg-brand-900/40 border border-brand-900 px-2 py-0.5 mb-4 inline-block">
                 {edu.type}
               </span>
 
-              <h3 className="text-lg font-black uppercase tracking-tight text-[#fafafa] group-hover:text-purple-300 transition-colors duration-300 leading-tight mb-2">
+              <h3 className="text-lg font-semibold tracking-[-0.01em] text-[#fafafa] leading-tight mb-2">
                 {edu.degree}
               </h3>
 
-              <p className="font-mono text-sm text-purple-400 group-hover:text-purple-300 transition-colors duration-300 mb-1">
+              <p className="font-mono text-sm text-brand-400 mb-1">
                 {edu.institution}
               </p>
               <p className="font-mono text-xs text-[#a1a1aa] mb-5 uppercase tracking-widest">
                 {edu.period}
               </p>
 
-              <p className="text-sm md:text-base text-[#71717a] leading-relaxed group-hover:text-[#a1a1aa] transition-colors duration-300">
+              <p className="text-sm md:text-base text-[#71717a] leading-relaxed">
                 {edu.description}
               </p>
-
-              <div
-                aria-hidden="true"
-                className="absolute bottom-0 left-0 h-0.5 w-0 group-hover:w-full bg-purple-600 transition-all duration-500"
-              />
             </motion.article>
           )})}
         </motion.div>

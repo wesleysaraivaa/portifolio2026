@@ -53,16 +53,16 @@ export function Loader({ onComplete }: LoaderProps) {
             <p className="text-xs font-mono uppercase tracking-[0.3em] text-[#a1a1aa] mb-4">
               PORTFÓLIO
             </p>
-            <h1 className="text-[clamp(2.5rem,8vw,5rem)] font-black uppercase tracking-tighter text-[#fafafa] leading-none">
+            <h1 className="text-[clamp(2.5rem,8vw,5rem)] font-bold uppercase tracking-tighter text-[#fafafa] leading-none">
               WESLEY{' '}
-              <span className="text-purple-500">SARAIVA</span>
+              <span className="text-brand-400">SARAIVA</span>
             </h1>
           </motion.div>
 
           <div className="w-[min(400px,80vw)]">
             <div className="h-0.5 w-full bg-[#27272a] mb-3">
               <motion.div
-                className="h-full bg-purple-500"
+                className="h-full bg-brand-400"
                 style={{ width: `${count}%` }}
               />
             </div>
@@ -70,7 +70,7 @@ export function Loader({ onComplete }: LoaderProps) {
               <span className="text-xs font-mono text-[#a1a1aa] uppercase tracking-widest">
                 CARREGANDO
               </span>
-              <span className="text-2xl font-black font-mono text-purple-400 tabular-nums">
+              <span className="text-2xl font-bold font-mono text-brand-400 tabular-nums">
                 {count.toString().padStart(3, '0')}
               </span>
             </div>

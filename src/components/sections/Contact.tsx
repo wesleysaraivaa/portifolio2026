@@ -39,7 +39,7 @@ function FormField({
 const inputClass = cn(
   'w-full bg-transparent border-b-2 border-[#3f3f46] text-[#fafafa]',
   'text-lg py-3 px-0 placeholder:text-[#3f3f46]',
-  'focus:outline-none focus:border-purple-500 transition-colors duration-200',
+  'focus:outline-none focus:border-brand-400 transition-colors duration-200',
   'leading-tight'
 )
 
@@ -78,7 +78,7 @@ export function Contact() {
       <div className="max-w-7xl mx-auto px-4 md:px-6" ref={ref}>
         <SectionHeader index="09" title="CONTATO" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-16">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -91,18 +91,18 @@ export function Contact() {
             <div className="space-y-5 mb-10">
               <a
                 href={`mailto:${contactInfo.email}`}
-                className="flex items-center gap-3 text-[#fafafa] hover:text-purple-400 transition-colors duration-200 group"
+                className="flex items-center gap-3 text-[#fafafa] hover:text-brand-400 transition-colors duration-200 group"
                 aria-label={`Enviar e-mail para ${contactInfo.email}`}
               >
-                <span className="size-10 border border-[#3f3f46] group-hover:border-purple-600 flex items-center justify-center transition-colors duration-200 shrink-0">
-                  <Mail size={14} className="text-purple-500" />
+                <span className="size-10 border border-[#3f3f46] group-hover:border-brand-400 flex items-center justify-center transition-colors duration-200 shrink-0">
+                  <Mail size={14} className="text-brand-400" />
                 </span>
                 <span className="font-mono text-sm break-all">{contactInfo.email}</span>
               </a>
 
               <div className="flex items-center gap-3 text-[#a1a1aa]">
                 <span className="size-10 border border-[#27272a] flex items-center justify-center shrink-0">
-                  <MapPin size={14} className="text-purple-500" />
+                  <MapPin size={14} className="text-brand-400" />
                 </span>
                 <span className="font-mono text-sm uppercase tracking-wide">{contactInfo.location}</span>
               </div>
@@ -121,7 +121,7 @@ export function Contact() {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="size-10 border border-[#3f3f46] flex items-center justify-center text-[#a1a1aa] hover:border-purple-600 hover:text-purple-400 transition-all duration-200"
+                      className="size-10 border border-[#3f3f46] flex items-center justify-center text-[#a1a1aa] hover:border-brand-400 hover:text-brand-400 transition-all duration-200"
                       aria-label={link.label}
                     >
                       {Icon && <Icon size={15} />}
@@ -131,7 +131,7 @@ export function Contact() {
               </div>
             </div>
 
-            <div className="mt-8 border-l-2 border-purple-600 pl-4">
+            <div className="mt-8 border-l-2 border-brand-400 pl-4">
               <div className="flex items-center gap-2 mb-1">
                 <span className="size-2 rounded-full bg-green-500" aria-hidden="true" />
                 <span className="text-xs font-mono uppercase tracking-widest text-green-400">
@@ -153,10 +153,10 @@ export function Contact() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="flex flex-col items-center justify-center h-full min-h-96 border-2 border-purple-600 p-8 text-center"
+                className="flex flex-col items-center justify-center h-full min-h-96 border-2 border-brand-400 p-8 text-center"
               >
                 <div className="text-[3rem] mb-4">✓</div>
-                <h3 className="text-xl font-black uppercase tracking-tight text-[#fafafa] mb-2">
+                <h3 className="text-xl font-semibold tracking-[-0.01em] text-[#fafafa] mb-2">
                   MENSAGEM ENVIADA!
                 </h3>
                 <p className="text-sm text-[#a1a1aa]">
@@ -249,9 +249,9 @@ export function Contact() {
                   disabled={submitting}
                   className={cn(
                     'w-full h-14 flex items-center justify-center gap-3',
-                    'bg-purple-600 hover:bg-purple-700 text-white',
-                    'text-sm font-black uppercase cursor-pointer tracking-widest',
-                    'transition-all duration-200 focus-visible:outline-2 focus-visible:outline-purple-400',
+                    'bg-brand-400 hover:bg-brand-300 text-[#09090b]',
+                    'text-sm font-bold uppercase cursor-pointer tracking-widest',
+                    'transition-all duration-200 focus-visible:outline-2 focus-visible:outline-brand-400',
                     submitting && 'opacity-70 cursor-not-allowed'
                   )}
                   aria-busy={submitting}

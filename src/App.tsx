@@ -27,7 +27,7 @@ export default function App() {
   return (
     <>
       {isLoading && <Loader onComplete={handleLoaderComplete} />}
-      <div className="relative min-h-screen bg-[#09090b] text-[#fafafa] selection:bg-purple-600 selection:text-white">
+      <div className="relative min-h-screen bg-[#09090b] text-[#fafafa] selection:bg-brand-400 selection:text-[#09090b]">
         <NoiseOverlay />
         <ScrollProgress />
         <Header />

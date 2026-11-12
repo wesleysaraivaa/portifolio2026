@@ -15,9 +15,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
     <motion.article
       variants={staggerItem}
       className={cn(
-        'group relative border border-[#27272a] hover:border-purple-500/50 bg-[#121214] overflow-hidden',
-        'transition-all duration-300 flex flex-col h-full',
-        'hover:-translate-y-1.5 hover:shadow-[0_12px_32px_-8px_rgba(139,92,246,0.18)]',
+        'group card relative bg-[#121214] overflow-hidden flex flex-col h-full',
         index === 0 && 'md:col-span-2'
       )}
       onMouseEnter={() => setHovered(true)}
@@ -26,11 +24,11 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       {/* Barra estilo janela de navegador*/}
       <div className="flex items-center justify-between px-4 py-2.5 bg-[#18181b] border-b border-[#27272a] text-[#71717a] shrink-0">
         <div className="flex items-center gap-1.5">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#27272a] group-hover:bg-[#ef4444]/80 transition-colors" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#27272a] group-hover:bg-[#eab308]/80 transition-colors" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#27272a] group-hover:bg-[#22c55e]/80 transition-colors" />
+          <span className="w-2.5 h-2.5 rounded-full bg-[#3f3f46]" />
+          <span className="w-2.5 h-2.5 rounded-full bg-[#3f3f46]" />
+          <span className="w-2.5 h-2.5 rounded-full bg-[#3f3f46]" />
         </div>
-        <span className="text-[11px] font-mono tracking-wider text-[#71717a] group-hover:text-purple-300 transition-colors truncate max-w-50">
+        <span className="text-[11px] font-mono tracking-wider text-[#71717a] truncate max-w-50">
           {project.slug}.app
         </span>
         <span className="text-[10px] font-mono text-[#52525b] uppercase">{project.category}</span>
@@ -74,7 +72,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                 href={project.projectUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 h-10 px-4 bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold uppercase tracking-widest transition-all shadow-[0_0_20px_rgba(147,51,234,0.4)]"
+                className="flex items-center gap-2 h-10 px-4 bg-brand-400 hover:bg-brand-300 text-[#09090b] text-xs font-bold uppercase tracking-widest transition-colors"
                 onClick={(e) => e.stopPropagation()}
                 aria-label={`Ver projeto ${project.title} ao vivo`}
                 tabIndex={hovered ? 0 : -1}
@@ -109,7 +107,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       >
         <div>
           <div className="flex items-start justify-between gap-4 mb-2">
-            <h3 className="text-lg md:text-base font-black uppercase tracking-tight text-[#fafafa] group-hover:text-purple-300 transition-colors duration-300 leading-tight">
+            <h3 className="text-lg md:text-base font-semibold tracking-[-0.01em] text-[#fafafa] leading-tight">
               {project.title}
             </h3>
             <span className="text-xs font-mono text-[#71717a] shrink-0">{project.year}</span>
@@ -123,7 +121,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             {project.technologies.slice(0, 4).map((tech) => (
               <span
                 key={tech}
-                className="text-[10px] font-mono uppercase tracking-wider text-purple-300/90 bg-purple-950/40 border border-purple-800/60 px-2 py-0.5"
+                className="text-[10px] font-mono uppercase tracking-wider text-brand-300 bg-brand-900/40 border border-brand-900 px-2 py-0.5"
               >
                 {tech}
               </span>
@@ -136,7 +134,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             href={project.projectUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-purple-400 hover:text-purple-300 transition-colors focus-visible:outline-2 focus-visible:outline-purple-400"
+            className="flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-brand-400 hover:text-brand-300 transition-colors focus-visible:outline-2 focus-visible:outline-brand-400"
             aria-label={`Ver projeto ${project.title} ao vivo`}
           >
             <ExternalLink size={12} />
@@ -147,7 +145,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               href={project.repositoryUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-[#71717a] hover:text-[#fafafa] transition-colors focus-visible:outline-2 focus-visible:outline-purple-400"
+              className="flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-[#71717a] hover:text-[#fafafa] transition-colors focus-visible:outline-2 focus-visible:outline-brand-400"
               aria-label={`Ver código do projeto ${project.title} no GitHub`}
             >
               <Github size={12} />
@@ -184,10 +182,10 @@ export function Projects() {
               key={cat.value}
               onClick={() => setFilter(cat.value)}
               className={cn(
-                'h-9 px-4 text-xs font-mono cursor-pointer uppercase tracking-widest transition-all duration-200 border focus-visible:outline-2 focus-visible:outline-purple-400',
+                'h-9 px-4 text-xs font-mono cursor-pointer uppercase tracking-widest transition-all duration-200 border focus-visible:outline-2 focus-visible:outline-brand-400',
                 filter === cat.value
-                  ? 'bg-purple-600 border-purple-600 text-white shadow-[0_0_20px_rgba(147,51,234,0.35)]'
-                  : 'bg-[#18181b]/60 border-[#27272a] text-[#a1a1aa] hover:border-purple-600/60 hover:text-white'
+                  ? 'bg-brand-400 border-brand-400 text-[#09090b]'
+                  : 'bg-[#18181b]/60 border-[#27272a] text-[#a1a1aa] hover:border-[#3f3f46] hover:text-[#fafafa]'
               )}
               aria-pressed={filter === cat.value}
             >
@@ -203,7 +201,7 @@ export function Projects() {
             variants={staggerContainer}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr] gap-6 lg:gap-8"
           >
             {filtered.map((project, i) => (
               <ProjectCard key={project.id} project={project} index={i} />

@@ -25,7 +25,7 @@ export function TechMarquee() {
   return (
     <section
       aria-label="Tecnologias"
-      className="w-full bg-purple-600 py-5 overflow-hidden border-y-2 border-purple-700"
+      className="w-full bg-[#0f0f12] py-5 overflow-hidden border-y border-[#27272a]"
     >
       <ul className="sr-only">
         {technologies.map((t) => <li key={t}>{t}</li>)}
@@ -39,10 +39,10 @@ export function TechMarquee() {
         {technologies.map((tech, i) => (
           <span
             key={i}
-            className="inline-flex items-center gap-6 mx-6 text-xl font-black uppercase tracking-tighter text-black"
+            className="inline-flex items-center gap-6 mx-6 text-base font-medium uppercase tracking-[0.15em] text-[#71717a]"
           >
             {tech}
-            <span className="text-purple-800 text-2xl" aria-hidden="true">·</span>
+            <span className="text-brand-500" aria-hidden="true">·</span>
           </span>
         ))}
       </MarqueeComponent>

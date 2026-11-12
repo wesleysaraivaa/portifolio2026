@@ -24,9 +24,9 @@ export function Skills() {
               aria-controls={`panel-${cat.id}`}
               onClick={() => setActive(cat.id)}
               className={cn(
-                'cursor-pointer px-5 py-4 text-xs md:text-base font-mono uppercase tracking-widest border-b-2 -mb-0.5 transition-all duration-200 whitespace-nowrap focus-visible:outline-2 focus-visible:outline-purple-400',
+                'cursor-pointer px-5 py-4 text-xs md:text-base font-mono uppercase tracking-widest border-b-2 -mb-0.5 transition-all duration-200 whitespace-nowrap focus-visible:outline-2 focus-visible:outline-brand-400',
                 active === cat.id
-                  ? 'border-purple-500 text-purple-400 bg-purple-950/30'
+                  ? 'border-brand-400 text-brand-400 bg-brand-400/10'
                   : 'border-transparent text-[#a1a1aa] hover:text-[#fafafa] hover:border-[#3f3f46]'
               )}
             >
@@ -59,12 +59,12 @@ export function Skills() {
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.04, duration: 0.4 }}
-                  className="group border border-[#27272a] p-4 hover:bg-purple-600 hover:border-purple-600 transition-all duration-300 cursor-default"
+                  className="group card p-4 cursor-default"
                 >
-                  <span className="text-[10px] font-mono text-[#52525b] group-hover:text-purple-200 block mb-2 transition-colors">
+                  <span className="text-[10px] font-mono text-brand-500 block mb-2">
                     {String(i + 1).padStart(2, '0')}
                   </span>
-                  <span className="text-sm md:text-base font-medium uppercase tracking-wide text-[#fafafa] group-hover:text-white transition-colors leading-tight block">
+                  <span className="text-sm md:text-base font-semibold tracking-[-0.01em] text-[#fafafa] leading-tight block">
                     {skill}
                   </span>
                 </motion.div>

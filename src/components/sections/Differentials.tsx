@@ -28,25 +28,25 @@ export function Differentials() {
           variants={staggerContainer}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_1fr] gap-0"
         >
           {differentials.map((item) => (
             <motion.div
               key={item.number}
               variants={staggerItem}
-              className="group relative border border-[#27272a] p-6 hover:bg-purple-600 hover:border-purple-600 transition-all duration-300 cursor-default"
+              className="group relative card p-6 cursor-default"
             >
               <span
                 aria-hidden="true"
-                className="block text-[clamp(2.5rem,6vw,4rem)] font-black text-[#27272a] group-hover:text-purple-700 transition-colors duration-300 leading-none tracking-tighter mb-4 select-none"
+                className="block text-[clamp(2.5rem,6vw,4rem)] font-black text-brand-900 leading-none tracking-tighter mb-4 select-none"
               >
                 {item.number}
               </span>
 
-              <h3 className="text-sm md:text-base font-black uppercase tracking-tight text-[#fafafa] group-hover:text-white transition-colors duration-300 mb-2 leading-tight">
+              <h3 className="text-sm md:text-base font-semibold tracking-[-0.01em] text-[#fafafa] mb-2 leading-tight">
                 {item.title}
               </h3>
-              <p className="text-xs md:text-base text-[#71717a] group-hover:text-purple-200 transition-colors duration-300 leading-relaxed">
+              <p className="text-xs md:text-base text-[#71717a] leading-relaxed">
                 {item.description}
               </p>
             </motion.div>
